@@ -5,7 +5,7 @@ import assetArray from './data.js'
 
 
 // Function
-function Menu(props) {
+function Menu({setAsset}) {
   // State for the class
   const [active, setActive] = useState("nav")
   // Return
@@ -23,7 +23,10 @@ function Menu(props) {
         </div>
         <ul>
           {assetArray.map((asset) => {
-            return (<li>{asset}</li>)
+            return (<li onClick=
+              {() => setAsset(asset)}
+              key={asset}>
+              {asset}</li>)
           })}
         </ul>
       </nav>

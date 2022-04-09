@@ -1,12 +1,12 @@
 // Import 
 import {useState, useEffect} from "react"
 import Card from './Card.jsx'
+import assetArray from "./data.js"
 
 // Function
-function Api(props) {
+function Api({asset}) {
   // Use state for the current asset
-  // TODO: lift this state to receive info from the buttons
-  const [asset, setAsset] = useState("BTC-USD")
+  const [name, setName] = useState("")
   const [time, setTime] = useState("")
   const [dif, setDif] = useState("")
   const [percDiff, setPercDiff] = useState("")
@@ -41,7 +41,7 @@ function Api(props) {
       .then(response => response.json())
       .then(data => {
         const rootArray = (data.quoteResponse.result[0])
-        setAsset(rootArray.shortName)
+        setName(rootArray.shortName)
         setTime(() => currentDate())
         setDif(roundNumber(rootArray.regularMarketChange, 3))
         setPercDiff(`${roundNumber(rootArray.regularMarketChangePercent, 3)}%`)
@@ -52,12 +52,12 @@ function Api(props) {
   // Call when renders the page
   useEffect(() => {
     handleClick()
-  }, [])
+  }, [asset])
 
   // Return
   return (
     <Card
-      asset={asset}
+      asset={name}
       time={time}
       dif={dif}
       percDiff={percDiff}
