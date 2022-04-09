@@ -1,0 +1,79 @@
+/* Styling the open menu */
+.menu-open {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-open span{
+  display: flex;
+  width: 40px;
+  height: 4px;
+  background: black;
+  margin-top: 5px;
+}
+/* Styling the closed menu */
+.nav{
+  position: fixed;
+  top: 0;
+  left: -25%;
+  width: 25%;
+  height: 100vh;
+  background-color: black;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px black;
+}
+/* Styling the active open menu */
+.nav.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: black;
+  transition: 0.5s;
+  box-shadow: 2px 2px 2px black;
+}
+.nav ul{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.nav ul li{
+  margin-top: 2rem;
+  font-size: 2.5em;
+  cursor: pointer;
+  list-style-type: none;
+  color: whitesmoke;
+}
+/* Styling the active closed menu */
+.menu-close{
+position: absolute;
+top: 1rem;
+right: 1rem;
+width: 18px;
+height: 18px;
+cursor: pointer;
+}
+.menu-close span{
+  display: flex;
+  width: 30px;
+  height: 2px;
+  background: whitesmoke;
+}
+.menu-close :nth-child(1){
+  position: absolute;
+  left: -2px;
+  top: 7px;
+  transform: rotate(45deg);
+}
+.menu-close :nth-child(2){
+  position: absolute;
+  left: -2px;
+  top: 7px;
+  transform: rotate(135deg);
+}
