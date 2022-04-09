@@ -5,11 +5,11 @@ import './App.css'
 import Header from './Header.jsx'
 import Menu from './Menu.jsx';
 import Api from './Api.jsx'
-import assetArray from './data';
+import assetObj from './data';
 
 function App() {
   // Lift up state
-  const [asset, setAsset] = useState(assetArray[0]);
+  const [asset, setAsset] = useState(Object.keys(assetObj)[0]);
   return (
     <div>
       <Header />

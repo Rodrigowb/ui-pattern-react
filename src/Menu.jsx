@@ -1,7 +1,7 @@
 // Import
 import {useState} from "react"
 import './Menu.css'
-import assetArray from './data.js'
+import assetObj from './data.js'
 
 
 // Function
@@ -22,12 +22,11 @@ function Menu({setAsset}) {
           <span></span>
         </div>
         <ul>
-          {assetArray.map((asset) => {
-            return (<li onClick=
-              {() => setAsset(asset)}
-              key={asset}>
-              {asset}</li>)
-          })}
+          {Object.keys(assetObj).map((key, value) => (
+            <li onClick={() => setAsset(Object.keys(assetObj)[value])}
+            key={value}
+            >{assetObj[key]}</li>
+          ))}
         </ul>
       </nav>
     </div>

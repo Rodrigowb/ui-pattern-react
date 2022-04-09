@@ -1,7 +1,6 @@
 // Import 
 import {useState, useEffect} from "react"
 import Card from './Card.jsx'
-import assetArray from "./data.js"
 
 // Function
 function Api({asset}) {
@@ -35,7 +34,7 @@ function Api({asset}) {
     }
   }
 
-  // Call yahoo api
+  // Call yahoo api for clickable elements
   const handleClick = (event) => {
     fetch(`https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=${asset}`, configuration)
       .then(response => response.json())
@@ -45,7 +44,7 @@ function Api({asset}) {
         setTime(() => currentDate())
         setDif(roundNumber(rootArray.regularMarketChange, 3))
         setPercDiff(`${roundNumber(rootArray.regularMarketChangePercent, 3)}%`)
-        setPrice(roundNumber(rootArray.regularMarketPrice, 0))
+        setPrice(roundNumber(rootArray.regularMarketPrice, 2))
       })
   }
 

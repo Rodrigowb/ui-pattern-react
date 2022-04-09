@@ -1,4 +1,14 @@
-const assetArray = ["BTC-USD", "ETH-USD", "BRL=X", "%5EIXIC", "SPY", "%5EBVSP", "%5EVIX", "CL=F", "GC=F"]
+const assetObj = {
+  "BTC-USD": "Bitcoin U$",
+  "ETH-USD": "Ethereum U$",
+  "BRL=X": "U$ Dolar/ Br Real",
+  "%5EIXIC": "Nasdaq",
+  "SPY": "S&P 500",
+  "%5EBVSP": "Ibovespa",
+  "%5EVIX": "Vix Composite",
+  "CL=F": "Crude Oil",
+  "GC=F": "Gold",
+}
 
 // Export
-export default assetArray
+export default assetObj
