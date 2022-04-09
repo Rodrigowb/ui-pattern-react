@@ -1,6 +1,8 @@
 // Import
 import {useState} from "react"
 import './Menu.css'
+import assetArray from './data.js'
+
 
 // Function
 function Menu(props) {
@@ -20,9 +22,9 @@ function Menu(props) {
           <span></span>
         </div>
         <ul>
-          <li>USD/BRL</li>
-          <li>NASDAQ</li>
-          <li>SP500</li>
+          {assetArray.map((asset) => {
+            return (<li>{asset}</li>)
+          })}
         </ul>
       </nav>
     </div>

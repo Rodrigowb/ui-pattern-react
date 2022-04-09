@@ -5,8 +5,8 @@ import './Header.css'
 function Header(props) {
   // Return
   return (
-    <div>
-      <h1>Wanka Inc.</h1>
+    <div className='header'>
+      <h1 className='title'>Wanka Inc.</h1>
       <h2>Financial informations</h2>
     </div>
   )
