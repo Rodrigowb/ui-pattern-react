@@ -2,6 +2,7 @@
 import {useState} from "react"
 import './Menu.css'
 import assetObj from './data.js'
+import {Link} from "react-router-dom"
 
 
 // Function
@@ -23,9 +24,11 @@ function Menu({setAsset}) {
         </div>
         <ul>
           {Object.keys(assetObj).map((key, value) => (
-            <li onClick={() => setAsset(Object.keys(assetObj)[value])}
-            key={value}
-            >{assetObj[key]}</li>
+            <li>
+              <Link to={assetObj[key]} style={{textDecoration: 'none', color: 'whitesmoke'}}onClick={() => setAsset(Object.keys(assetObj)[value])}
+              key={value}
+              >{assetObj[key]}</Link>
+            </li>
           ))}
         </ul>
       </nav>

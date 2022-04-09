@@ -77,3 +77,8 @@ cursor: pointer;
   top: 7px;
   transform: rotate(135deg);
 }
+/* Styling links from react routers */
+link{
+  text-decoration: none;
+  color: white;
+}

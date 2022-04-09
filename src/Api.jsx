@@ -30,7 +30,7 @@ function Api({asset}) {
   const configuration = {
     method: 'GET',
     headers: {
-    'x-api-key': 'AiP36bAlD85Ll8ruQTJUyRtF35ca0qj7MEjfweW1'
+    'x-api-key': 'wb62oKe7T7X1lmjqff5a8s4WorS5h5cazj2TlhZh'
     }
   }
 
